@@ -1,4 +1,4 @@
-# 🌟 PROJECT KELOMPOK 4 🌟
+# 🌟 STUDIV🌟
 
 ## 📂 Daftar Isi Folder
 - **Dokumen UAS** 📄
@@ -29,13 +29,13 @@ For detailed documentation, refer to the files linked below (written in Indonesi
 ## 🤝 Contributors
 | Contributor       | GitHub Profile                                  |
 |-------------------|------------------------------------------------|
-| **Adia Sandra**  | [🌐 Profile](https://github.com/sandraalmeera) |
-| **Yessica**      | [🌐 Profile](https://github.com/yesicafapa)    |
+| **Hanif Huda**  | [🌐 Profile](https://github.com/OGHMA) |
+| **Adam Noverian**      | [🌐 Profile](https://github.com/swipezz)    |
 
 ---
 
 ## 📝 Deskripsi
-This repository is the collaborative work of **Kelompok 2** for the **UAS Project**. It includes:
+This repository is the collaborative work of **Kelompok 4** for the **UAS Project**. It includes:
 - 📌 Initial project documentation.
 - 📌 Database features.
 - 📌 Group project report.
