@@ -29,7 +29,8 @@ For detailed documentation, refer to the files linked below (written in Indonesi
 ## 🤝 Contributors
 | Contributor       | GitHub Profile                                  |
 |-------------------|------------------------------------------------|
-| **Hanif Huda**  | [🌐 Profile](https://github.com/OGHMA) |
+|**Raditya Alfareza**|🌐 Profile](https://github.com/radityaalfareza)
+|**Hanif Huda**  | [🌐 Profile](https://github.com/OHGMA) |
 | **Adam Noverian**      | [🌐 Profile](https://github.com/swipezz)    |
 
 ---
