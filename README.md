@@ -2,9 +2,9 @@
 
 ## 📂 Daftar Isi Folder
 - **Dokumen UAS** 📄
-  - 📘 Dokumentasi Awal Proyek Pengembangan Basis Data Toko Risky Bawang dan Palawija.pdf
+  - 📘 Dokumentasi Awal Proyek Pengembangan Studiv.pdf
   - 📙 Fitur Database[1].pdf
-  - 📗 LAPORAN TUGAS UAS kelompok 2.pdf
+  - 📗 LAPORAN TUGAS UAS kelompok 4.pdf
   - 📕 MANUAL PENGGUNAAN SISTEM MANAJEMEN.pdf
 - **Folder Basic** 📁
   - 🔧 Codingan composer
