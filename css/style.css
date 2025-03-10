@@ -1,0 +1,18 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.custom-heading {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.testBg {
+    background-color: #ffdb0e;
+}
+
+.pp {
+    height: 60px;
+}
