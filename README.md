@@ -2,9 +2,9 @@
 
 ## 📂 Daftar Isi Folder
 - **Dokumen UAS** 📄
-  - 📘 Dokumentasi Awal Proyek Pengembangan Basis Data Toko Risky Bawang dan Palawija.pdf
+  - 📘 Dokumentasi Awal Proyek Pengembangan Studiv.pdf
   - 📙 Fitur Database[1].pdf
-  - 📗 LAPORAN TUGAS UAS kelompok 2.pdf
+  - 📗 LAPORAN TUGAS UAS kelompok 4.pdf
   - 📕 MANUAL PENGGUNAAN SISTEM MANAJEMEN.pdf
 - **Folder Basic** 📁
   - 🔧 Codingan composer
@@ -30,8 +30,8 @@ For detailed documentation, refer to the files linked below (written in Indonesi
 | Contributor       | GitHub Profile                                  |
 |-------------------|------------------------------------------------|
 |**Raditya Alfareza**| [🌐 Profile](https://github.com/radityaalfareza)
-|**Hanif Huda**  | [🌐 Profile](https://github.com/OHGMA) |
-| **Adam Noverian**      | [🌐 Profile](https://github.com/swipezz)    |
+|**Mohammad Hanif Huda A**  | [🌐 Profile](https://github.com/OHGMA) |
+|**Adam Noverian**      | [🌐 Profile](https://github.com/swipezz)    |
 
 ---
 
@@ -49,7 +49,7 @@ We hope this repository provides a clear understanding of our project. 😊
 ## 🚀 How to Use
 1. Clone this repository locally:
    ```bash
-   git clone https://github.com/AbidRafiul/UAS_Kelompok2.git
+   git clone https://github.com/radityaalfareza/Studiv.git
    ```
 2. Open the document files in the "Dokumen UAS" folder.
 3. Follow the system usage manual for further information.
