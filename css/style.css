@@ -1,6 +1,10 @@
 body {
     padding: 0;
     margin: 0;
+    background-image: url('../img/bg.jpg');
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
 .custom-heading {
@@ -16,3 +20,36 @@ body {
 .pp {
     height: 60px;
 }
+
+.image-button {
+    background-size: cover; /* Ensure the image covers the button */
+    background-position: center; /* Center the image */
+    border: none; /* Remove the button border */
+    padding: 0; /* Remove default padding */
+    width: 200px; /* Set the width of the button */
+    height: 100px; /* Set the height of the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.image-button:hover {
+    opacity: 0.8; /* Optional: Add hover effect */
+}
+
+.custom-input {
+    border: none !important; /* Remove all borders */
+    border-bottom: 2px solid #91919171 !important; /* Add bottom border */
+    border-radius: 0 !important; /* Optional: remove border radius */
+    outline: none; /* Remove the outline on focus */
+}
+
+.custom-input:focus {
+    border-bottom: 2px solid #007bff !important; /* Add bottom border */
+}
+
+/* Remove blue outline and focus box-shadow */
+.form-control:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: none !important; /* Remove blue shadow */
+}
+
+
