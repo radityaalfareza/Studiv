@@ -1,16 +1,18 @@
 body {
   padding: 0;
   margin: 0;
+
 }
+
+.custom-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 
 .custom-heading {
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
-}
-
-.testBg {
-  background-color: #ffdb0e;
 }
 
 .pp {
