@@ -58,11 +58,18 @@
                             <button type="button" class="btn btn-light w-100">Jawab</button>
                         </div>
                         <div class="col-auto">
-                            <div class="search-container d-flex align-items-center">
-                                <input type="text" id="searchInput" class="form-control form-control-sm search-input me-2" placeholder="Cari...">
-                                <label for="searchToggle" id="searchIconLabel" class="btn btn-light btn-sm search-icon-label">
-                                    <i class="bi bi-search"></i>
-                                </label>
+                            <div class="d-flex align-items-center"> <!-- Wrapper for icons -->
+                                <!-- Search Container (Checkbox Hack) -->
+                                <div class="search-container d-flex align-items-center me-2"> <!-- Added me-2 for spacing -->
+                                    <input type="text" id="searchInput" class="form-control form-control-sm search-input me-2" placeholder="Cari...">
+                                    <label for="searchToggle" id="searchIconLabel" class="btn btn-light btn-sm search-icon-label">
+                                        <i class="bi bi-search"></i>
+                                    </label>
+                                </div>
+                                <!-- Notification Icon Button -->
+                                <button type="button" class="btn btn-light btn-sm notification-icon-btn">
+                                     <i class="bi bi-bell-fill"></i> <!-- Filled bell icon -->
+                                </button>
                             </div>
                         </div>
                     </div>
