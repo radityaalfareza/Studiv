@@ -81,6 +81,20 @@ textarea:focus {
   opacity: 0.8; /* Optional: Add hover effect */
 }
 
+.overflow-container {
+    max-height: 95.1vh; /* or whatever max size you want */
+    overflow-y: auto; /* vertical scroll */
+    overflow-x: hidden; /* no horizontal scroll */
+    
+    /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.overflow-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
 .custom-input {
   border: none !important; /* Remove all borders */
   border-bottom: 2px solid #91919171 !important; /* Add bottom border */
