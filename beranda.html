@@ -12,6 +12,41 @@
     <title>Studiv</title>
 </head>
 <body>
+    <div class="modal fade" id="laporModal" tabindex="-1" aria-labelledby="laporModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="laporModalLabel">Formulir Pelaporan</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formLaporan">
+          <div class="mb-3">
+            <label for="kategoriLaporan" class="form-label">Kategori Laporan</label>
+            <select class="form-select" id="kategoriLaporan" required>
+              <option selected disabled value="">Pilih kategori</option>
+              <option value="spam">Spam</option>
+              <option value="pelecehan">Pelecehan</option>
+              <option value="informasi_salah">Informasi Salah</option>
+              <option value="lainnya">Lainnya</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="deskripsiLaporan" class="form-label">Deskripsi Laporan</label>
+            <textarea class="form-control" id="deskripsiLaporan" rows="3" placeholder="Jelaskan masalahnya..." required></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button type="submit" form="formLaporan" class="btn btn-primary">Kirim</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <div class="container">
         <div class="row pt-3">
           <div class="row pt-3">
@@ -81,13 +116,13 @@
                             <div class="col-auto d-flex">
                                 <button type="button" class="btn"> <img src="img/up-arrow.png" alt="Up" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
                                 <button type="button" class="btn"> <img src="img/down-arrow.png" alt="Down" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
-                                <button type="button" class="btn"> <img src="img/chat.png" alt="Chat" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
+                                <button type="button" class="btn" onclick="window.location.href='comment.html'"> <img src="img/chat.png" alt="Chat" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
                             </div>
                             <div class="col-auto d-flex align-items-center">
                                 <div class="save-button-wrapper me-2">
                                     <button type="button" class="btn"> <img src="img/bookmark.png" alt="Save" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">Save</p> </button>
                                 </div>
-                                <button type="button" class="btn"> <img src="img/event.png" alt="Report" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">Report</p> </button>
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#laporModal"> <img src="img/event.png" alt="Report" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">Report</p> </button>
                             </div>
                         </div>
                     </div>
@@ -114,13 +149,13 @@
                             <div class="col-auto d-flex">
                                 <button type="button" class="btn"> <img src="img/up-arrow.png" alt="Up" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
                                 <button type="button" class="btn"> <img src="img/down-arrow.png" alt="Down" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
-                                <button type="button" class="btn"> <img src="img/chat.png" alt="Chat" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
+                                <button type="button" class="btn" onclick="window.location.href='comment.html'"> <img src="img/chat.png" alt="Chat" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
                             </div>
                             <div class="col-auto d-flex align-items-center">
                                 <div class="save-button-wrapper me-2">
                                     <button type="button" class="btn"> <img src="img/bookmark.png" alt="Save" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">Save</p> </button>
                                 </div>
-                                <button type="button" class="btn"> <img src="img/event.png" alt="Report" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">Report</p> </button>
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#laporModal"> <img src="img/event.png" alt="Report" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">Report</p> </button>
                             </div>
                         </div>
                     </div>
@@ -147,13 +182,13 @@
                             <div class="col-auto d-flex">
                                 <button type="button" class="btn"> <img src="img/up-arrow.png" alt="Up" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
                                 <button type="button" class="btn"> <img src="img/down-arrow.png" alt="Down" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
-                                <button type="button" class="btn"> <img src="img/chat.png" alt="Chat" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
+                                <button type="button" class="btn" onclick="window.location.href='comment.html'"> <img src="img/chat.png" alt="Chat" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">100</p> </button>
                             </div>
                             <div class="col-auto d-flex align-items-center">
                                 <div class="save-button-wrapper me-2">
                                     <button type="button" class="btn"> <img src="img/bookmark.png" alt="Save" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">Save</p> </button>
                                 </div>
-                                <button type="button" class="btn"> <img src="img/event.png" alt="Report" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">Report</p> </button>
+                                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#laporModal"> <img src="img/event.png" alt="Report" class="img-fluid" style="width: 30px; height: 30px;"> <p class="text-center my-auto ms-0">Report</p> </button>
                             </div>
                         </div>
                      </div>
