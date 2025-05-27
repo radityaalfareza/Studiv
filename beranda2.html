@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />          
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Studiv Sidebar with Top Search and Clickable Profile</title>
 
   <!-- Tailwind CSS -->
@@ -34,15 +34,15 @@
       <!-- Navigasi utama sidebar -->
       <nav class="space-y-8">
         <!-- Link Dasbor -->
-        <a href="#" class="group flex items-center space-x-3 text-sm font-semibold transition-all duration-300 px-4 py-2 rounded-full hover:bg-white">
-        <i class="fas fa-th-large text-lg text-white transition-colors duration-300 group-hover:text-[#1c7ed6]"></i>
-        <span class="text-white transition-colors duration-300 group-hover:text-[#1c7ed6]">Dasbor</span>
+        <a href="#" class="flex items-center text-white text-sm font-semibold space-x-3 opacity-80 hover:opacity-100 transition-opacity">
+          <i class="fas fa-th-large text-white text-lg"></i>
+          <span>Dasbor</span>
         </a>
+
         <!-- Link Beranda -->
-        <a href="#" class="flex items-center text-white space-x-3 font-semibold transition-all duration-300 px-4 py-2 rounded-full
-         hover:bg-white" >
+        <a href="#" class="flex items-center text-white text-sm font-semibold space-x-3 opacity-80 hover:opacity-100 transition-opacity">
           <i class="fas fa-home text-white text-lg"></i>
-          <span class="text-white transition-colors duration-300 group-hover:text-[#1c7ed6]"">Bookmark</span>
+          <span>Beranda</span>
         </a>
 
         <!-- Link Profil -->
@@ -65,6 +65,7 @@
       <span>Logout</span>
     </a>
   </aside>
+
 
   <!-- Konten Utama -->
   <main class="flex-1 bg-gradient-to-r from-[#6ad1db] via-[#6ad1db] to-[#4a6f8f] p-6 flex flex-col">
