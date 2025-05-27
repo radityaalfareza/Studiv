@@ -14,16 +14,16 @@
             <!-- Sidebar -->
             <div class="col col-2 border border-3 rounded-4 mb-3 d-flex flex-column custom-shadow" style="background-color: #9ACBD0; position: sticky; height: 95.1vh; top: 16px;">
                 <!--sidebar beranda -->
-                <button onclick="window.location.href='beranda.html'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Beranda</button>
+                <button onclick="window.location.href='beranda.php'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Beranda</button>
                   <!--sidebar post -->
-                <button onclick="window.location.href='post.html'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Post</button>
+                <button onclick="window.location.href='post.php'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Post</button>
                   <!--sidebar bookmark -->
-                <button onclick="window.location.href='bookmark.html'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Bookmark</button>
+                <button onclick="window.location.href='bookmark.php'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Bookmark</button>
                   <!--sidebar profil -->
                 <div class="flex-grow-1"></div>
-                <button onclick="window.location.href='profile.html'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Profil</button>
+                <button onclick="window.location.href='profile.php'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Profil</button>
                   <!--sidebar setting -->
-                <button onclick="window.location.href='setting.html'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Setting</button>
+                <button onclick="window.location.href='setting.php'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Setting</button>
             </div>
             <div class="col postHead border border-3 rounded-4 p-3 mb-3 custom-shadow" style="background-color: #ffffff; margin-left: 1%;">
                 <h1>Profile</h1>
@@ -37,8 +37,8 @@
                         <h4>Bio</h4>
                         <textarea class="rounded-2" type="text" style="width: 100%; height: 70%; margin-top: .5%; margin-bottom: 2%;"></textarea>
                         <br>
-                        <button onclick="window.location.href='changePw.html'" type="button" class="btn btn-danger p-2 mt-3 me-5">Reset Password</button>
-                        <button onclick="window.location.href='changePw.html'" type="button" class="btn btn-primary p-2 mt-3">Save Changes</button>
+                        <button onclick="window.location.href='changePw.php'" type="button" class="btn btn-danger p-2 mt-3 me-5">Reset Password</button>
+                        <button onclick="window.location.href='changePw.php'" type="button" class="btn btn-primary p-2 mt-3">Save Changes</button>
                     </div>
                     <div class="ms-5 col">
                         <h4>Profile Picture</h4>

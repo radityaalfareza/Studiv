@@ -11,12 +11,12 @@
     <div class="container">
         <div class="row pt-3">
             <div class="col col-2 border border-3 rounded-4 mb-3 d-flex flex-column custom-shadow" style="background-color: #9ACBD0; position: sticky; height: 95.1vh; top: 16px;">
-                <button onclick="window.location.href='beranda.html'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Beranda</button>
-                <button onclick="window.location.href='post.html'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Post</button>
-                <button onclick="window.location.href='bookmark.html'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Bookmark</button>
+                <button onclick="window.location.href='beranda.php'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Beranda</button>
+                <button onclick="window.location.href='post.php'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Post</button>
+                <button onclick="window.location.href='bookmark.php'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Bookmark</button>
                 <div class="flex-grow-1"></div>
-                <button onclick="window.location.href='profile.html'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Profil</button>
-                <button onclick="window.location.href='setting.html'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Setting</button>
+                <button onclick="window.location.href='profile.php'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Profil</button>
+                <button onclick="window.location.href='setting.php'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Setting</button>
             </div>
             <div class="col postHead border border-3 rounded-4 p-3 mb-3 custom-shadow overflow-container" style="background-color: #ffffff; margin-left: 1%;">
                 <div class="d-flex">

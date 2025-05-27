@@ -40,16 +40,16 @@
             <!-- Sidebar -->
             <div class="col col-2 border border-3 rounded-4 mb-3 d-flex flex-column custom-shadow" style="background-color: #9ACBD0; position: sticky; height: 95.1vh; top: 16px;">
                 <!--sidebar beranda -->
-                <button onclick="window.location.href='beranda.html'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Beranda</button>
+                <button onclick="window.location.href='beranda.php'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Beranda</button>
                   <!--sidebar post -->
-                <button onclick="window.location.href='post.html'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Post</button>
+                <button onclick="window.location.href='post.php'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Post</button>
                   <!--sidebar bookmark -->
-                <button onclick="window.location.href='bookmark.html'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Bookmark</button>
+                <button onclick="window.location.href='bookmark.php'" type="button" class="btn btn-light p-2 mt-3" style="width: 100%;">Bookmark</button>
                   <!--sidebar profil -->
                 <div class="flex-grow-1"></div>
-                <button onclick="window.location.href='profile.html'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Profil</button>
+                <button onclick="window.location.href='profile.php'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Profil</button>
                   <!--sidebar setting -->
-                <button onclick="window.location.href='setting.html'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Setting</button>
+                <button onclick="window.location.href='setting.php'" type="button" class="btn btn-light p-2 mb-3 mt-auto" style="width: 100%;">Setting</button>
             </div>
 
             <!-- Main Content -->
@@ -76,7 +76,7 @@
                                     </label>
                                 </div>
                                 <!-- Notification Icon Button -->
-                                <button type="button" class="btn btn-light btn-sm notification-icon-btn" onclick="location.href='notifikasi.html'">
+                                <button type="button" class="btn btn-light btn-sm notification-icon-btn" onclick="location.href='notifikasi.php'">
                                      <i class="bi bi-bell-fill"></i> <!-- Filled bell icon -->
                                 </button>
                             </div>
