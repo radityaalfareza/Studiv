@@ -1,0 +1,163 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Create Post
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <div class="flex items-center space-x-3">
+     <img alt="STudiv" class="w-10 h-10 rounded-full" height="40" src="../img/logo studiv.svg" width="40"/>
+     <span class="text-2xl font-extrabold text-blue-600 select-none">
+      Studiv
+     </span>
+    </div>
+    <nav class="flex items-center space-x-4">
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="beranda4.html">
+      Home
+     </a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="login2.html">
+      Log In
+     </a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="register2.html">
+      Sign Up
+     </a>
+    </nav>
+   </div>
+  </header>
+  <!-- Create Post Form -->
+  <main class="flex-grow flex items-center justify-center px-4 py-12">
+   <div class="max-w-3xl w-full bg-white rounded-md shadow-md p-8">
+    <h1 class="text-3xl font-extrabold text-gray-900 mb-6 text-center">
+     Create a Post
+    </h1>
+    <form class="space-y-6" action="#" method="POST" novalidate>
+     <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="subreddit">
+       Choose a community
+      </label>
+      <select class="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="subreddit" name="subreddit" required="">
+       <option value="" disabled="" selected="">
+        Select a community
+       </option>
+       <option value="technology">
+        r/technology
+       </option>
+       <option value="movies">
+        r/movies
+       </option>
+       <option value="gaming">
+        r/gaming
+       </option>
+       <option value="funny">
+        r/funny
+       </option>
+       <option value="science">
+        r/science
+       </option>
+      </select>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="title">
+       Post Title
+      </label>
+      <input autocomplete="off" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="title" maxlength="300" name="title" placeholder="Enter a title for your post" required="" type="text"/>
+      <p class="mt-1 text-xs text-gray-500">
+       Max 300 characters
+      </p>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="post-type">
+       Post Type
+      </label>
+      <div class="flex space-x-4">
+       <label class="inline-flex items-center">
+        <input checked="" class="form-radio text-blue-600 focus:ring-blue-500" name="post-type" type="radio" value="text"/>
+        <span class="ml-2">
+         Text
+        </span>
+       </label>
+       <label class="inline-flex items-center">
+        <input class="form-radio text-blue-600 focus:ring-blue-500" name="post-type" type="radio" value="image"/>
+        <span class="ml-2">
+         Image
+        </span>
+       </label>
+       <label class="inline-flex items-center">
+        <input class="form-radio text-blue-600 focus:ring-blue-500" name="post-type" type="radio" value="link"/>
+        <span class="ml-2">
+         Link
+        </span>
+       </label>
+      </div>
+     </div>
+     <div id="text-content" class="mt-4">
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="text-body">
+       Text (optional)
+      </label>
+      <textarea class="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm resize-y" id="text-body" name="text-body" placeholder="Write your post here..." rows="6"></textarea>
+     </div>
+     <div id="image-content" class="mt-4 hidden">
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="image-url">
+       Image URL
+      </label>
+      <input autocomplete="off" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="image-url" name="image-url" placeholder="https://example.com/image.jpg" type="url"/>
+     </div>
+     <div id="link-content" class="mt-4 hidden">
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="link-url">
+       Link URL
+      </label>
+      <input autocomplete="off" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="link-url" name="link-url" placeholder="https://example.com" type="url"/>
+     </div>
+     <div>
+      <button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 font-semibold text-lg" type="submit">
+       Post
+      </button>
+     </div>
+    </form>
+   </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-auto">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+    <p>
+     © 2025 Teknologi Rekayasa Perangkat Lunak PNM.
+    </p>
+   </div>
+  </footer>
+  <script>
+   // Toggle post content inputs based on post type selection
+    const postTypeRadios = document.querySelectorAll('input[name="post-type"]');
+    const textContent = document.getElementById('text-content');
+    const imageContent = document.getElementById('image-content');
+    const linkContent = document.getElementById('link-content');
+
+    function updatePostContentVisibility() {
+      const selected = document.querySelector('input[name="post-type"]:checked').value;
+      textContent.classList.toggle('hidden', selected !== 'text');
+      imageContent.classList.toggle('hidden', selected !== 'image');
+      linkContent.classList.toggle('hidden', selected !== 'link');
+    }
+
+    postTypeRadios.forEach(radio => {
+      radio.addEventListener('change', updatePostContentVisibility);
+    });
+
+    // Initialize visibility on page load
+    updatePostContentVisibility();
+  </script>
+ </body>
+</html>

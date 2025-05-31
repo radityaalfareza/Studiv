@@ -1,0 +1,162 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Notifications
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <div class="flex items-center space-x-3">
+     <img alt="Studiv" class="w-10 h-10 rounded-full" height="40" src="../img/logo studiv.svg" width="40"/>
+     <span class="text-2xl font-extrabold text-blue-600 select-none">
+      Studiv
+     </span>
+    </div>
+    <nav class="flex items-center space-x-4">
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="beranda4.html">
+      Home
+     </a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="postingan2.html">
+      Create Post
+     </a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="login2.html">
+      Log In
+     </a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="register2.html">
+      Sign Up
+     </a>
+    </nav>
+   </div>
+  </header>
+  <!-- Notifications Content -->
+  <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+   <h1 class="text-3xl font-extrabold text-gray-900 mb-6">
+    Notifications
+   </h1>
+   <section class="bg-white rounded-md shadow-md divide-y divide-gray-200">
+    <!-- Notification 1 -->
+    <article class="p-4 flex space-x-4 hover:bg-gray-50 cursor-pointer">
+     <img alt="User avatar of u/tech_guru with short black hair and glasses" class="w-12 h-12 rounded-full flex-shrink-0" height="48" src="https://storage.googleapis.com/a1aa/image/39b5da1f-d43a-4c6b-5c69-bc3fd25b5031.jpg" width="48"/>
+     <div class="flex-1">
+      <p class="text-sm text-gray-700">
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        u/tech_guru
+       </a>
+       commented on your post in
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        r/technology
+       </a>
+       :
+      </p>
+      <p class="mt-1 text-gray-900 font-medium">
+       "This quantum chip breakthrough is amazing!"
+      </p>
+      <p class="mt-1 text-xs text-gray-500">
+       2 hours ago
+      </p>
+     </div>
+    </article>
+    <!-- Notification 2 -->
+    <article class="p-4 flex space-x-4 hover:bg-gray-50 cursor-pointer">
+     <img alt="User avatar of u/moviebuff with a film reel icon on blue background" class="w-12 h-12 rounded-full flex-shrink-0" height="48" src="https://storage.googleapis.com/a1aa/image/2b5ae5f4-3022-456b-9d0e-fa5bc42e90da.jpg" width="48"/>
+     <div class="flex-1">
+      <p class="text-sm text-gray-700">
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        u/moviebuff
+       </a>
+       upvoted your comment in
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        r/movies
+       </a>
+       .
+      </p>
+      <p class="mt-1 text-xs text-gray-500">
+       5 hours ago
+      </p>
+     </div>
+    </article>
+    <!-- Notification 3 -->
+    <article class="p-4 flex space-x-4 hover:bg-gray-50 cursor-pointer">
+     <img alt="User avatar of u/gamer123 with a game controller icon on green background" class="w-12 h-12 rounded-full flex-shrink-0" height="48" src="https://storage.googleapis.com/a1aa/image/46e2d13a-457e-4328-cb45-59c549e91c3d.jpg" width="48"/>
+     <div class="flex-1">
+      <p class="text-sm text-gray-700">
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        u/gamer123
+       </a>
+       mentioned you in a comment in
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        r/gaming
+       </a>
+       .
+      </p>
+      <p class="mt-1 text-xs text-gray-500">
+       30 minutes ago
+      </p>
+     </div>
+    </article>
+    <!-- Notification 4 -->
+    <article class="p-4 flex space-x-4 hover:bg-gray-50 cursor-pointer">
+     <img alt="User avatar of u/jokester with a laughing emoji icon on blue background" class="w-12 h-12 rounded-full flex-shrink-0" height="48" src="https://storage.googleapis.com/a1aa/image/9d324661-d8c3-43bb-99ec-276f815644a3.jpg" width="48"/>
+     <div class="flex-1">
+      <p class="text-sm text-gray-700">
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        u/jokester
+       </a>
+       replied to your comment in
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        r/funny
+       </a>
+       .
+      </p>
+      <p class="mt-1 text-xs text-gray-500">
+       1 day ago
+      </p>
+     </div>
+    </article>
+    <!-- Notification 5 -->
+    <article class="p-4 flex space-x-4 hover:bg-gray-50 cursor-pointer">
+     <img alt="User avatar of u/scientist with a microscope icon on blue background" class="w-12 h-12 rounded-full flex-shrink-0" height="48" src="https://storage.googleapis.com/a1aa/image/6ba71632-803d-4f27-0fc9-190f8051268f.jpg" width="48"/>
+     <div class="flex-1">
+      <p class="text-sm text-gray-700">
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        u/scientist
+       </a>
+       awarded you a silver award in
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        r/science
+       </a>
+       .
+      </p>
+      <p class="mt-1 text-xs text-gray-500">
+       3 hours ago
+      </p>
+     </div>
+    </article>
+   </section>
+   <div class="mt-6 text-center text-gray-500 text-sm select-none">
+    No more notifications.
+   </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-auto">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+    <p>
+     © 2025 Teknologi Rekayasa Perangkat Lunak PNM.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>

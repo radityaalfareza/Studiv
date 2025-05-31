@@ -1,0 +1,407 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Reddit Clone - Post Detail
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+     font-family: 'Roboto', sans-serif;
+   }
+  </style>
+ </head>
+ <body class="bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 relative">
+    <div class="flex items-center space-x-3">
+     <img alt="Reddit clone logo with white R letter on blue background" class="w-10 h-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/78b9251d-f24d-41cf-2de9-73556530fbaa.jpg" width="40"/>
+     <span class="text-2xl font-extrabold text-blue-600 select-none">reddit</span>
+    </div>
+    <nav class="flex items-center space-x-4">
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="#">Home</a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="#">Create Post</a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="#">Notifications</a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="#">Bookmarks</a>
+     <!-- Profile dropdown -->
+     <div class="relative" id="profile-dropdown-container">
+      <button aria-haspopup="true" aria-expanded="false" aria-label="User menu" class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded" id="user-menu-button" type="button" onclick="toggleDropdown()">
+       <img alt="User profile avatar" class="w-10 h-10 rounded-full object-cover" height="40" src="https://storage.googleapis.com/a1aa/image/1a2b3c4d-5678-90ab-cdef-1234567890ab.jpg" width="40"/>
+       <i class="fas fa-caret-down text-gray-600"></i>
+      </button>
+      <div aria-labelledby="user-menu-button" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden" id="dropdown-menu" role="menu" tabindex="-1">
+       <div class="py-1" role="none">
+        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" href="#" role="menuitem" tabindex="-1" id="menu-item-0">Profile</a>
+        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" href="#" role="menuitem" tabindex="-1" id="menu-item-1">Settings</a>
+        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" href="#" role="menuitem" tabindex="-1" id="menu-item-2">Log Out</a>
+       </div>
+      </div>
+     </div>
+    </nav>
+   </div>
+  </header>
+  <!-- Main Content -->
+  <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+   <!-- Post -->
+   <article class="bg-white rounded-md shadow-md p-6 mb-8">
+    <div class="flex items-center space-x-3 text-xs text-gray-500 mb-3 select-none">
+     <img alt="Subreddit icon with white T letter on blue background" class="w-6 h-6 rounded-full" height="24" src="https://storage.googleapis.com/a1aa/image/69ba02c1-e4a7-4f6b-bc98-8dd3585a2689.jpg" width="24"/>
+     <a class="font-semibold text-blue-600 hover:underline" href="#">r/technology</a>
+     <span>• Posted by u/tech_guru 2 hours ago</span>
+    </div>
+    <h1 class="text-2xl font-extrabold text-gray-900 mb-4">New breakthrough in quantum computing announced</h1>
+    <p class="text-gray-700 mb-4">
+     Researchers have developed a new quantum chip that significantly increases processing speed and efficiency, potentially revolutionizing the field of computing.
+    </p>
+    <img alt="Close-up image of a blue quantum computing chip with glowing circuits" class="rounded-md mb-4 max-h-96 w-full object-cover" height="384" src="https://storage.googleapis.com/a1aa/image/007e66c3-d0dd-45f2-f9ae-23cf07a39fda.jpg" width="768"/>
+    <div class="flex items-center space-x-6 text-gray-500 text-sm select-none">
+     <button class="flex items-center space-x-1 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Upvote post">
+      <i class="fas fa-arrow-up"></i>
+      <span>124</span>
+     </button>
+     <button class="flex items-center space-x-1 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Downvote post">
+      <i class="fas fa-arrow-down"></i>
+     </button>
+     <button class="flex items-center space-x-1 hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-green-500" aria-label="Share post">
+      <i class="fas fa-share"></i>
+      <span>Share</span>
+     </button>
+     <button class="flex items-center space-x-1 hover:text-red-600 focus:outline-none focus:ring-2 focus:ring-red-500" aria-label="Save post">
+      <i class="far fa-bookmark"></i>
+      <span>Save</span>
+     </button>
+    </div>
+   </article>
+   <!-- Comments Section -->
+<section style="">
+  <h2 class="text-xl font-bold text-gray-900 mb-4">Comments (3)</h2>
+  <!-- Comment Form -->
+  <form id="comment-form" class="mb-6 space-y-4" onsubmit="submitComment(event)">
+    <textarea
+      aria-label="Add a comment"
+      class="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm resize-y"
+      id="new-comment"
+      name="new-comment"
+      placeholder="Add a comment..."
+      rows="3"
+      required
+    ></textarea>
+    <div class="flex justify-end space-x-2">
+      <button
+        class="px-4 py-2 bg-gray-300 rounded-md font-semibold hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+        type="button"
+        onclick="cancelReply()"
+      >
+        Cancel
+      </button>
+      <button
+        class="px-4 py-2 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        type="submit"
+      >
+        Comment
+      </button>
+    </div>
+    <input type="hidden" id="reply-to" name="reply-to" value="" />
+  </form>
+  <!-- Comments List -->
+  <ul id="comments-list" class="space-y-6">
+    <!-- Comment 1 -->
+    <li id="c1" class="bg-white rounded-md shadow p-4">
+      <div class="flex items-start space-x-3">
+        <img
+          alt="User avatar of u/tech_guru with short black hair and glasses"
+          class="w-10 h-10 rounded-full flex-shrink-0"
+          height="40"
+          src="https://storage.googleapis.com/a1aa/image/39b5da1f-d43a-4c6b-5c69-bc3fd25b5031.jpg"
+          width="40"
+        />
+        <div class="flex-1">
+          <div class="flex items-center justify-between">
+            <div>
+              <a class="font-semibold text-blue-600 hover:underline" href="#"
+                >u/tech_guru</a
+              >
+              <span class="text-xs text-gray-500 ml-2 select-none">2 hours ago</span>
+            </div>
+            <button
+              aria-label="Reply to comment"
+              class="text-sm text-blue-600 hover:text-blue-700 focus:outline-none"
+              onclick="startReply('c1', 'u/tech_guru')"
+            >
+              Reply
+            </button>
+          </div>
+          <p class="mt-1 text-gray-700">
+            This quantum chip breakthrough is amazing!
+          </p>
+        </div>
+      </div>
+      <!-- Replies -->
+      <ul class="mt-4 ml-12 space-y-4">
+        <li id="c1r1" class="bg-gray-50 rounded-md p-3">
+          <div class="flex items-start space-x-3">
+            <img
+              alt="User avatar of u/scientist with a microscope icon on blue background"
+              class="w-8 h-8 rounded-full flex-shrink-0"
+              height="32"
+              src="https://storage.googleapis.com/a1aa/image/6ba71632-803d-4f27-0fc9-190f8051268f.jpg"
+              width="32"
+            />
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <div>
+                  <a class="font-semibold text-blue-600 hover:underline" href="#"
+                    >u/scientist</a
+                  >
+                  <span class="text-xs text-gray-500 ml-2 select-none">1 hour ago</span>
+                </div>
+                <button
+                  aria-label="Reply to comment"
+                  class="text-sm text-blue-600 hover:text-blue-700 focus:outline-none"
+                  onclick="startReply('c1r1', 'u/scientist')"
+                >
+                  Reply
+                </button>
+              </div>
+              <p class="mt-1 text-gray-700">
+                Indeed, this could change the future of computing.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </li>
+    <!-- Comment 2 -->
+    <li id="c2" class="bg-white rounded-md shadow p-4">
+      <div class="flex items-start space-x-3">
+        <img
+          alt="User avatar of u/gamer123 with a game controller icon on green background"
+          class="w-10 h-10 rounded-full flex-shrink-0"
+          height="40"
+          src="https://storage.googleapis.com/a1aa/image/46e2d13a-457e-4328-cb45-59c549e91c3d.jpg"
+          width="40"
+        />
+        <div class="flex-1">
+          <div class="flex items-center justify-between">
+            <div>
+              <a class="font-semibold text-blue-600 hover:underline" href="#"
+                >u/gamer123</a
+              >
+              <span class="text-xs text-gray-500 ml-2 select-none">30 minutes ago</span>
+            </div>
+            <button
+              aria-label="Reply to comment"
+              class="text-sm text-blue-600 hover:text-blue-700 focus:outline-none"
+              onclick="startReply('c2', 'u/gamer123')"
+            >
+              Reply
+            </button>
+          </div>
+          <p class="mt-1 text-gray-700">
+            Can't wait to see how this tech will be used in gaming!
+          </p>
+        </div>
+      </div>
+    </li>
+    <!-- Comment 3 -->
+    <li id="c3" class="bg-white rounded-md shadow p-4">
+      <div class="flex items-start space-x-3">
+        <img
+          alt="User avatar of u/jokester with a laughing emoji icon on blue background"
+          class="w-10 h-10 rounded-full flex-shrink-0"
+          height="40"
+          src="https://storage.googleapis.com/a1aa/image/9d324661-d8c3-43bb-99ec-276f815644a3.jpg"
+          width="40"
+        />
+        <div class="flex-1">
+          <div class="flex items-center justify-between">
+            <div>
+              <a class="font-semibold text-blue-600 hover:underline" href="#"
+                >u/jokester</a
+              >
+              <span class="text-xs text-gray-500 ml-2 select-none">1 day ago</span>
+            </div>
+            <button
+              aria-label="Reply to comment"
+              class="text-sm text-blue-600 hover:text-blue-700 focus:outline-none"
+              onclick="startReply('c3', 'u/jokester')"
+            >
+              Reply
+            </button>
+          </div>
+          <p class="mt-1 text-gray-700">
+            This is the kind of innovation we need more of!
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-auto">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+    <p>© 2024 Reddit Clone. All rights reserved.</p>
+    <nav class="flex space-x-4 mt-2 sm:mt-0">
+     <a class="hover:underline" href="#">About</a>
+     <a class="hover:underline" href="#">Help</a>
+     <a class="hover:underline" href="#">Terms</a>
+     <a class="hover:underline" href="#">Privacy</a>
+    </nav>
+   </div>
+  </footer>
+  <script>
+   // Profile dropdown toggle
+   const dropdownButton = document.getElementById('user-menu-button');
+   const dropdownMenu = document.getElementById('dropdown-menu');
+
+   function toggleDropdown() {
+     if (dropdownMenu.classList.contains('hidden')) {
+       dropdownMenu.classList.remove('hidden');
+       dropdownButton.setAttribute('aria-expanded', 'true');
+       document.addEventListener('click', outsideClickListener);
+     } else {
+       dropdownMenu.classList.add('hidden');
+       dropdownButton.setAttribute('aria-expanded', 'false');
+       document.removeEventListener('click', outsideClickListener);
+     }
+   }
+
+   function outsideClickListener(event) {
+     if (!dropdownMenu.contains(event.target) && !dropdownButton.contains(event.target)) {
+       dropdownMenu.classList.add('hidden');
+       dropdownButton.setAttribute('aria-expanded', 'false');
+       document.removeEventListener('click', outsideClickListener);
+     }
+   }
+
+   // Comment reply functionality
+   let currentReplyTo = null;
+
+   function startReply(commentId, username) {
+     currentReplyTo = commentId;
+     const textarea = document.getElementById('new-comment');
+     const replyInput = document.getElementById('reply-to');
+     replyInput.value = commentId;
+     textarea.placeholder = `Replying to ${username}...`;
+     textarea.focus();
+     // Scroll to comment form
+     textarea.scrollIntoView({ behavior: 'smooth', block: 'center' });
+   }
+
+   function cancelReply() {
+     currentReplyTo = null;
+     const textarea = document.getElementById('new-comment');
+     const replyInput = document.getElementById('reply-to');
+     replyInput.value = '';
+     textarea.placeholder = 'Add a comment...';
+     textarea.value = '';
+   }
+
+   function submitComment(event) {
+     event.preventDefault();
+     const textarea = document.getElementById('new-comment');
+     const replyInput = document.getElementById('reply-to');
+     const commentText = textarea.value.trim();
+     if (!commentText) return;
+
+     const commentsList = document.getElementById('comments-list');
+
+     // Create new comment element
+     const newComment = document.createElement('li');
+     newComment.className = 'bg-white rounded-md shadow p-4';
+
+     const userAvatarUrl = 'https://storage.googleapis.com/a1aa/image/1a2b3c4d-5678-90ab-cdef-1234567890ab.jpg'; // Example user avatar
+     const username = 'u/current_user'; // Example username
+     const now = new Date();
+     const timeString = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+
+     if (replyInput.value) {
+       // Find the comment to reply to
+       const parentComment = document.querySelector(`li[id="${replyInput.value}"]`) || null;
+       // If parent comment exists, append reply
+       // But since we don't have IDs on comments, we will append reply to the correct comment by commentId
+       // Instead, we will find the comment by a data attribute or fallback to first comment for demo
+       // For demo, append reply to the first comment's replies ul if reply-to is 'c1' or 'c1r1'
+       // Otherwise append as new comment
+
+       // Find the comment with id replyInput.value or fallback
+       let parentLi = null;
+       if (replyInput.value === 'c1' || replyInput.value === 'c1r1') {
+         parentLi = document.querySelector('li.bg-white.rounded-md.shadow.p-4');
+       }
+
+       if (parentLi) {
+         let repliesUl = parentLi.querySelector('ul');
+         if (!repliesUl) {
+           repliesUl = document.createElement('ul');
+           repliesUl.className = 'mt-4 ml-12 space-y-4';
+           parentLi.appendChild(repliesUl);
+         }
+         // Create reply element
+         const replyLi = document.createElement('li');
+         replyLi.className = 'bg-gray-50 rounded-md p-3';
+         replyLi.innerHTML = `
+          <div class="flex items-start space-x-3">
+           <img alt="User avatar of current user" class="w-8 h-8 rounded-full flex-shrink-0" src="${userAvatarUrl}" width="32" height="32"/>
+           <div class="flex-1">
+            <div class="flex items-center justify-between">
+             <div>
+              <a href="#" class="font-semibold text-blue-600 hover:underline">${username}</a>
+              <span class="text-xs text-gray-500 ml-2 select-none">${timeString}</span>
+             </div>
+             <button aria-label="Reply to comment" class="text-sm text-blue-600 hover:text-blue-700 focus:outline-none" onclick="startReply('${replyInput.value}', '${username}')">Reply</button>
+            </div>
+            <p class="mt-1 text-gray-700">${escapeHtml(commentText)}</p>
+           </div>
+          </div>
+         `;
+         repliesUl.appendChild(replyLi);
+       } else {
+         // Append as new top-level comment if parent not found
+         commentsList.appendChild(createTopLevelComment(userAvatarUrl, username, timeString, commentText));
+       }
+     } else {
+       // New top-level comment
+       commentsList.appendChild(createTopLevelComment(userAvatarUrl, username, timeString, commentText));
+     }
+
+     // Reset form
+     textarea.value = '';
+     cancelReply();
+    }
+
+    function createTopLevelComment(avatarUrl, username, time, text) {
+      const li = document.createElement('li');
+      li.className = 'bg-white rounded-md shadow p-4';
+      li.innerHTML = `
+       <div class="flex items-start space-x-3">
+        <img alt="User avatar of current user" class="w-10 h-10 rounded-full flex-shrink-0" src="${avatarUrl}" width="40" height="40"/>
+        <div class="flex-1">
+         <div class="flex items-center justify-between">
+          <div>
+           <a href="#" class="font-semibold text-blue-600 hover:underline">${username}</a>
+           <span class="text-xs text-gray-500 ml-2 select-none">${time}</span>
+          </div>
+          <button aria-label="Reply to comment" class="text-sm text-blue-600 hover:text-blue-700 focus:outline-none" onclick="startReply('new', '${username}')">Reply</button>
+         </div>
+         <p class="mt-1 text-gray-700">${escapeHtml(text)}</p>
+        </div>
+       </div>
+      `;
+      return li;
+    }
+
+    // Simple escape to prevent HTML injection in this demo
+    function escapeHtml(text) {
+      return text.replace(/[&<>"']/g, function(m) {
+        return {'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[m];
+      });
+    }
+  </script>
+ </body>
+</html>

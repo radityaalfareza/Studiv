@@ -1,0 +1,307 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Reddit Clone - Bookmarks
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 relative">
+    <div class="flex items-center space-x-3">
+     <img alt="Reddit clone logo with white R letter on blue background" class="w-10 h-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/78b9251d-f24d-41cf-2de9-73556530fbaa.jpg" width="40"/>
+     <span class="text-2xl font-extrabold text-blue-600 select-none">
+      reddit
+     </span>
+    </div>
+    <nav class="flex items-center space-x-4">
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="#">
+      Home
+     </a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="#">
+      Create Post
+     </a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="#">
+      Notifications
+     </a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="#">
+      Bookmarks
+     </a>
+     <!-- Profile dropdown -->
+     <div class="relative" x-data="{ open: false }">
+      <button aria-haspopup="true" aria-expanded="false" aria-label="User menu" class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded" id="user-menu-button" type="button" onclick="toggleDropdown()">
+       <img alt="User profile avatar" class="w-10 h-10 rounded-full object-cover" height="40" src="https://storage.googleapis.com/a1aa/image/1a2b3c4d-5678-90ab-cdef-1234567890ab.jpg" width="40"/>
+       <i class="fas fa-caret-down text-gray-600"></i>
+      </button>
+      <div aria-labelledby="user-menu-button" class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden" id="dropdown-menu" role="menu" tabindex="-1">
+       <div class="py-1" role="none">
+        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" href="#" role="menuitem" tabindex="-1" id="menu-item-0">
+         Profile
+        </a>
+        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" href="#" role="menuitem" tabindex="-1" id="menu-item-1">
+         Settings
+        </a>
+        <a class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-100 hover:text-blue-700" href="#" role="menuitem" tabindex="-1" id="menu-item-2">
+         Log Out
+        </a>
+       </div>
+      </div>
+     </div>
+    </nav>
+   </div>
+  </header>
+  <!-- Bookmarks Content -->
+  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+   <h1 class="text-3xl font-extrabold text-gray-900 mb-6">
+    Bookmarked Posts
+   </h1>
+   <section class="bg-white rounded-md shadow-md divide-y divide-gray-200">
+    <!-- Bookmark 1 -->
+    <article class="p-4 hover:bg-gray-50 cursor-pointer flex flex-col md:flex-row md:items-start md:space-x-4">
+     <img alt="Close-up image of a blue quantum computing chip with glowing circuits" class="w-full md:w-48 h-32 md:h-24 rounded-md object-cover flex-shrink-0 mb-3 md:mb-0" height="128" src="https://storage.googleapis.com/a1aa/image/007e66c3-d0dd-45f2-f9ae-23cf07a39fda.jpg" width="192"/>
+     <div class="flex-1">
+      <div class="flex items-center space-x-2 text-xs text-gray-500 mb-1">
+       <img alt="Subreddit icon with white T letter on blue background" class="w-5 h-5 rounded-full" height="20" src="https://storage.googleapis.com/a1aa/image/69ba02c1-e4a7-4f6b-bc98-8dd3585a2689.jpg" width="20"/>
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        r/technology
+       </a>
+       <span>
+        • Posted by u/tech_guru 2 hours ago
+       </span>
+      </div>
+      <h2 class="text-lg font-semibold text-gray-900 hover:text-blue-600">
+       New breakthrough in quantum computing announced
+      </h2>
+      <p class="mt-1 text-gray-700 text-sm">
+       Researchers have developed a new quantum chip that significantly increases processing speed.
+      </p>
+      <div class="mt-3 flex items-center space-x-6 text-gray-500 text-sm select-none">
+       <div class="flex items-center space-x-1">
+        <i class="fas fa-arrow-up">
+        </i>
+        <span>
+         124
+        </span>
+       </div>
+       <div class="flex items-center space-x-1">
+        <i class="far fa-comment">
+        </i>
+        <span>
+         56 Comments
+        </span>
+       </div>
+      </div>
+     </div>
+    </article>
+    <!-- Bookmark 2 -->
+    <article class="p-4 hover:bg-gray-50 cursor-pointer flex flex-col md:flex-row md:items-start md:space-x-4">
+     <img alt="Colorful movie poster with action scenes and characters" class="w-full md:w-48 h-32 md:h-24 rounded-md object-cover flex-shrink-0 mb-3 md:mb-0" height="128" src="https://storage.googleapis.com/a1aa/image/cea7f182-e567-4779-b98c-b0834694a46e.jpg" width="192"/>
+     <div class="flex-1">
+      <div class="flex items-center space-x-2 text-xs text-gray-500 mb-1">
+       <img alt="Subreddit icon with white M letter on blue background" class="w-5 h-5 rounded-full" height="20" src="https://storage.googleapis.com/a1aa/image/8813a95e-5976-40ef-3e94-1ca639830e09.jpg" width="20"/>
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        r/movies
+       </a>
+       <span>
+        • Posted by u/moviebuff 5 hours ago
+       </span>
+      </div>
+      <h2 class="text-lg font-semibold text-gray-900 hover:text-blue-600">
+       Top 10 movies to watch this summer
+      </h2>
+      <p class="mt-1 text-gray-700 text-sm">
+       A curated list of the most anticipated movies releasing this summer season.
+      </p>
+      <div class="mt-3 flex items-center space-x-6 text-gray-500 text-sm select-none">
+       <div class="flex items-center space-x-1">
+        <i class="fas fa-arrow-up">
+        </i>
+        <span>
+         89
+        </span>
+       </div>
+       <div class="flex items-center space-x-1">
+        <i class="far fa-comment">
+        </i>
+        <span>
+         34 Comments
+        </span>
+       </div>
+      </div>
+     </div>
+    </article>
+    <!-- Bookmark 3 -->
+    <article class="p-4 hover:bg-gray-50 cursor-pointer flex flex-col md:flex-row md:items-start md:space-x-4">
+     <img alt="Screenshot from a new open-world RPG game showing a fantasy landscape" class="w-full md:w-48 h-32 md:h-24 rounded-md object-cover flex-shrink-0 mb-3 md:mb-0" height="128" src="https://storage.googleapis.com/a1aa/image/8da38f5e-324d-4451-f009-d05adfe6ea98.jpg" width="192"/>
+     <div class="flex-1">
+      <div class="flex items-center space-x-2 text-xs text-gray-500 mb-1">
+       <img alt="Subreddit icon with white G letter on green background" class="w-5 h-5 rounded-full" height="20" src="https://storage.googleapis.com/a1aa/image/2ba43c1f-fbe9-4c74-c0b0-86f236e4ed07.jpg" width="20"/>
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        r/gaming
+       </a>
+       <span>
+        • Posted by u/gamer123 30 minutes ago
+       </span>
+      </div>
+      <h2 class="text-lg font-semibold text-gray-900 hover:text-blue-600">
+       New open-world RPG game trailer released
+      </h2>
+      <p class="mt-1 text-gray-700 text-sm">
+       The latest trailer showcases stunning graphics and gameplay mechanics.
+      </p>
+      <div class="mt-3 flex items-center space-x-6 text-gray-500 text-sm select-none">
+       <div class="flex items-center space-x-1">
+        <i class="fas fa-arrow-up">
+        </i>
+        <span>
+         210
+        </span>
+       </div>
+       <div class="flex items-center space-x-1">
+        <i class="far fa-comment">
+        </i>
+        <span>
+         78 Comments
+        </span>
+       </div>
+      </div>
+     </div>
+    </article>
+    <!-- Bookmark 4 -->
+    <article class="p-4 hover:bg-gray-50 cursor-pointer flex flex-col md:flex-row md:items-start md:space-x-4">
+     <img alt="Funny cat mid-jump failing to land on a table" class="w-full md:w-48 h-32 md:h-24 rounded-md object-cover flex-shrink-0 mb-3 md:mb-0" height="128" src="https://storage.googleapis.com/a1aa/image/62a0e12b-7079-4995-467a-de8353edf481.jpg" width="192"/>
+     <div class="flex-1">
+      <div class="flex items-center space-x-2 text-xs text-gray-500 mb-1">
+       <img alt="Subreddit icon with white F letter on blue background" class="w-5 h-5 rounded-full" height="20" src="https://storage.googleapis.com/a1aa/image/74bfb666-bc3e-4f04-f1c5-a946aaf9fefe.jpg" width="20"/>
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        r/funny
+       </a>
+       <span>
+        • Posted by u/jokester 1 day ago
+       </span>
+      </div>
+      <h2 class="text-lg font-semibold text-gray-900 hover:text-blue-600">
+       Hilarious cat video goes viral
+      </h2>
+      <p class="mt-1 text-gray-700 text-sm">
+       Watch this cat hilariously fail at jumping on the table.
+      </p>
+      <div class="mt-3 flex items-center space-x-6 text-gray-500 text-sm select-none">
+       <div class="flex items-center space-x-1">
+        <i class="fas fa-arrow-up">
+        </i>
+        <span>
+         47
+        </span>
+       </div>
+       <div class="flex items-center space-x-1">
+        <i class="far fa-comment">
+        </i>
+        <span>
+         102 Comments
+        </span>
+       </div>
+      </div>
+     </div>
+    </article>
+    <!-- Bookmark 5 -->
+    <article class="p-4 hover:bg-gray-50 cursor-pointer flex flex-col md:flex-row md:items-start md:space-x-4">
+     <img alt="Person meditating in a peaceful natural environment with soft sunlight" class="w-full md:w-48 h-32 md:h-24 rounded-md object-cover flex-shrink-0 mb-3 md:mb-0" height="128" src="https://storage.googleapis.com/a1aa/image/01ef56cf-0cee-4d19-1736-c47e4fcfd0de.jpg" width="192"/>
+     <div class="flex-1">
+      <div class="flex items-center space-x-2 text-xs text-gray-500 mb-1">
+       <img alt="Subreddit icon with white S letter on blue background" class="w-5 h-5 rounded-full" height="20" src="https://storage.googleapis.com/a1aa/image/e5d4f5c4-ab81-4db6-11b9-bb1ff5ac842c.jpg" width="20"/>
+       <a class="font-semibold text-blue-600 hover:underline" href="#">
+        r/science
+       </a>
+       <span>
+        • Posted by u/scientist 3 hours ago
+       </span>
+      </div>
+      <h2 class="text-lg font-semibold text-gray-900 hover:text-blue-600">
+       New study reveals benefits of meditation on brain health
+      </h2>
+      <p class="mt-1 text-gray-700 text-sm">
+       Scientists found that regular meditation improves memory and focus.
+      </p>
+      <div class="mt-3 flex items-center space-x-6 text-gray-500 text-sm select-none">
+       <div class="flex items-center space-x-1">
+        <i class="fas fa-arrow-up">
+        </i>
+        <span>
+         153
+        </span>
+       </div>
+       <div class="flex items-center space-x-1">
+        <i class="far fa-comment">
+        </i>
+        <span>
+         67 Comments
+        </span>
+       </div>
+      </div>
+     </div>
+    </article>
+   </section>
+   <div class="mt-6 text-center text-gray-500 text-sm select-none">
+    No more bookmarked posts.
+   </div>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-auto">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+    <p>
+     © 2024 Reddit Clone. All rights reserved.
+    </p>
+    <nav class="flex space-x-4 mt-2 sm:mt-0">
+     <a class="hover:underline" href="#">
+      About
+     </a>
+     <a class="hover:underline" href="#">
+      Help
+     </a>
+     <a class="hover:underline" href="#">
+      Terms
+     </a>
+     <a class="hover:underline" href="#">
+      Privacy
+     </a>
+    </nav>
+   </div>
+  </footer>
+  <script>
+   const dropdownButton = document.getElementById('user-menu-button');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+
+    function toggleDropdown() {
+      if (dropdownMenu.classList.contains('hidden')) {
+        dropdownMenu.classList.remove('hidden');
+        dropdownButton.setAttribute('aria-expanded', 'true');
+        document.addEventListener('click', outsideClickListener);
+      } else {
+        dropdownMenu.classList.add('hidden');
+        dropdownButton.setAttribute('aria-expanded', 'false');
+        document.removeEventListener('click', outsideClickListener);
+      }
+    }
+
+    function outsideClickListener(event) {
+      if (!dropdownMenu.contains(event.target) && !dropdownButton.contains(event.target)) {
+        dropdownMenu.classList.add('hidden');
+        dropdownButton.setAttribute('aria-expanded', 'false');
+        document.removeEventListener('click', outsideClickListener);
+      }
+    }
+  </script>
+ </body>
+</html>

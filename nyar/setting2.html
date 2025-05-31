@@ -1,0 +1,223 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Setting
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <div class="flex items-center space-x-3">
+     <img alt="Studiv" class="w-10 h-10 rounded-full" height="40" src="../img/logo studiv.svg" width="40"/>
+     <span class="text-2xl font-extrabold text-blue-600 select-none">
+      Studiv
+     </span>
+    </div>
+    <nav class="flex items-center space-x-4">
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="beranda4.html">
+      Home
+     </a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="postingan2.html">
+      Create Post
+     </a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="notifikasi2.html">
+      Notifications
+     </a>
+     <a class="text-gray-700 hover:text-blue-600 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500" href="login2.html">
+      Log Out
+     </a>
+    </nav>
+   </div>
+  </header>
+  <!-- Settings Content -->
+  <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-white rounded-md shadow-md mt-6">
+   <h1 class="text-3xl font-extrabold text-gray-900 mb-4">
+    Settings
+   </h1>
+   <!-- Tabs -->
+   <div class="border-b border-gray-200 mb-6">
+    <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+     <button aria-current="page" class="whitespace-nowrap py-4 px-1 border-b-2 border-blue-600 text-sm font-semibold text-blue-600 focus:outline-none" data-tab-target="account">
+      Account
+     </button>
+     <button class="whitespace-nowrap py-4 px-1 border-b-2 border-transparent text-sm font-semibold text-gray-500 hover:text-blue-600 hover:border-blue-600 focus:outline-none" data-tab-target="profile">
+      Profile
+     </button>
+     <button class="whitespace-nowrap py-4 px-1 border-b-2 border-transparent text-sm font-semibold text-gray-500 hover:text-blue-600 hover:border-blue-600 focus:outline-none" data-tab-target="privacy">
+      Privacy & Security
+     </button>
+     <button class="whitespace-nowrap py-4 px-1 border-b-2 border-transparent text-sm font-semibold text-gray-500 hover:text-blue-600 hover:border-blue-600 focus:outline-none" data-tab-target="notifications">
+      Notifications
+     </button>
+    </nav>
+   </div>
+   <!-- Tab Panels -->
+   <section id="account" class="tab-panel block">
+    <form class="space-y-6" action="#" method="POST" novalidate>
+     <h2 class="text-xl font-bold text-gray-900 mb-4">
+      Account Settings
+     </h2>
+     <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="username">
+       Username
+      </label>
+      <input autocomplete="username" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="username" name="username" placeholder="Your username" required="" type="text" value="johndoe"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="email">
+       Email address
+      </label>
+      <input autocomplete="email" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="email" name="email" placeholder="you@example.com" required="" type="email" value="johndoe@example.com"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="password">
+       Change Password
+      </label>
+      <input autocomplete="new-password" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="password" name="password" placeholder="New password" type="password"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="confirm-password">
+       Confirm New Password
+      </label>
+      <input autocomplete="new-password" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="confirm-password" name="confirm-password" placeholder="Confirm new password" type="password"/>
+     </div>
+     <div>
+      <button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 font-semibold text-lg" type="submit">
+       Save Changes
+      </button>
+     </div>
+    </form>
+   </section>
+   <section id="profile" class="tab-panel hidden">
+    <form class="space-y-6" action="#" method="POST" novalidate>
+     <h2 class="text-xl font-bold text-gray-900 mb-4">
+      Profile Settings
+     </h2>
+     <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="display-name">
+       Display Name
+      </label>
+      <input autocomplete="off" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="display-name" name="display-name" placeholder="Your display name" type="text" value="John Doe"/>
+     </div>
+     <div>
+      <label class="block text-sm font-medium text-gray-700 mb-1" for="bio">
+       Bio
+      </label>
+      <textarea class="block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm resize-y" id="bio" name="bio" placeholder="Tell us about yourself" rows="4">Tech enthusiast, gamer, and movie lover.</textarea>
+     </div>
+     <div>
+      <button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 font-semibold text-lg" type="submit">
+       Save Profile
+      </button>
+     </div>
+    </form>
+   </section>
+   <section id="privacy" class="tab-panel hidden">
+    <form class="space-y-6" action="#" method="POST" novalidate>
+     <h2 class="text-xl font-bold text-gray-900 mb-4">
+      Privacy & Security
+     </h2>
+     <fieldset class="space-y-4">
+      <legend class="sr-only">
+       Privacy Settings
+      </legend>
+      <div class="flex items-center">
+       <input checked="" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" id="private-account" name="private-account" type="checkbox"/>
+       <label class="ml-2 block text-sm text-gray-900" for="private-account">
+        Make my profile private
+       </label>
+      </div>
+      <div class="flex items-center">
+       <input checked="" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" id="two-factor" name="two-factor" type="checkbox"/>
+       <label class="ml-2 block text-sm text-gray-900" for="two-factor">
+        Enable two-factor authentication
+       </label>
+      </div>
+      <div class="flex items-center">
+       <input class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" id="data-sharing" name="data-sharing" type="checkbox"/>
+       <label class="ml-2 block text-sm text-gray-900" for="data-sharing">
+        Allow data sharing with third parties
+       </label>
+      </div>
+     </fieldset>
+     <div>
+      <button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 font-semibold text-lg" type="submit">
+       Save Privacy Settings
+      </button>
+     </div>
+    </form>
+   </section>
+   <section id="notifications" class="tab-panel hidden">
+    <form class="space-y-6" action="#" method="POST" novalidate>
+     <h2 class="text-xl font-bold text-gray-900 mb-4">
+      Notification Settings
+     </h2>
+     <fieldset class="space-y-4">
+      <legend class="sr-only">
+       Notification Preferences
+      </legend>
+      <div class="flex items-center">
+       <input checked="" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" id="email-notifications" name="email-notifications" type="checkbox"/>
+       <label class="ml-2 block text-sm text-gray-900" for="email-notifications">
+        Email notifications for replies and mentions
+       </label>
+      </div>
+      <div class="flex items-center">
+       <input checked="" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" id="push-notifications" name="push-notifications" type="checkbox"/>
+       <label class="ml-2 block text-sm text-gray-900" for="push-notifications">
+        Push notifications on mobile
+       </label>
+      </div>
+      <div class="flex items-center">
+       <input class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded" id="newsletter" name="newsletter" type="checkbox"/>
+       <label class="ml-2 block text-sm text-gray-900" for="newsletter">
+        Subscribe to newsletter
+       </label>
+      </div>
+     </fieldset>
+     <div>
+      <button class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 font-semibold text-lg" type="submit">
+       Save Notification Settings
+      </button>
+     </div>
+    </form>
+   </section>
+  </main>
+  <script>
+   const tabs = document.querySelectorAll('[data-tab-target]');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active styles from all tabs
+        tabs.forEach(t => {
+          t.classList.remove('border-blue-600', 'text-blue-600');
+          t.classList.add('border-transparent', 'text-gray-500', 'hover:text-blue-600', 'hover:border-blue-600');
+          t.setAttribute('aria-current', 'false');
+        });
+        // Hide all tab panels
+        tabPanels.forEach(panel => panel.classList.add('hidden'));
+        // Activate clicked tab
+        tab.classList.add('border-blue-600', 'text-blue-600');
+        tab.classList.remove('border-transparent', 'text-gray-500', 'hover:text-blue-600', 'hover:border-blue-600');
+        tab.setAttribute('aria-current', 'page');
+        // Show corresponding panel
+        const target = tab.getAttribute('data-tab-target');
+        document.getElementById(target).classList.remove('hidden');
+      });
+    });
+  </script>
+ </body>
+</html>
