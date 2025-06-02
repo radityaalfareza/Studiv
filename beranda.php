@@ -230,9 +230,9 @@ while ($post = mysqli_fetch_assoc($result)) {
                         <span>Share</span>
                     </button>
                     <form method="post" action="function/simpan_bookmark.php" style="display:inline; margin-bottom:0; ">
+                    <input type="hidden" name="post_id" value="' . $post['id'] . '">
+                    <input type="hidden" name="account_id" value="' . htmlspecialchars($_SESSION['account_id']) . '">
                         <button type="submit" class="flex items-center space-x-1 hover:text-red-600">
-                            <input type="hidden" name="post_id" value="' . $post['id'] . '">
-                            <input type="hidden" name="account_id" value="4">
                             <i class="far fa-bookmark"></i>
                             <span>Bookmark</span>
                         </button>
@@ -253,76 +253,44 @@ mysqli_stmt_close($stmt);
                     Popular Communities
                 </h2>
                 <ul class="space-y-3">
-                    <li class="flex items-center space-x-3 hover:bg-gray-50 rounded p-2 cursor-pointer">
-                        <img alt="Subreddit icon with white T letter on blue background" class="w-8 h-8 rounded-full"
-                            height="32"
-                            src="https://imgs.search.brave.com/zPLEmnXUkNTGq2-f6qUw6V4QGyvtMvn_xTyz6qqCLQI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vNjEvMjU3NDYx/LTA1MC04NDRGQzVD/NS9TcG90LWZvdXIt/bGVnZ2VkLXJvYm90/LUJvc3Rvbi1EeW5h/bWljcy5qcGc"
-                            width="32" />
-                        <div>
-                            <a class="font-semibold text-blue-600 hover:underline" href="/s/technology.php">
-                                Technology
-                            </a>
-                            <p class="text-xs text-gray-500">
-                                12 members
-                            </p>
-                        </div>
-                    </li>
-                    <li class="flex items-center space-x-3 hover:bg-gray-50 rounded p-2 cursor-pointer">
-                        <img alt="Subreddit icon with white M letter on blue background" class="w-8 h-8 rounded-full"
-                            height="32"
-                            src="https://imgs.search.brave.com/BLUlyNmCP1YDqkAHXMF21_I4J1mpKDbuISpmATCL6lc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMz/NzIxNDI4My92ZWN0/b3IvcmVhbGlzdGlj/LXBvcGNvcm4tY2lu/ZW1hLW1vdmllLXdh/dGNoaW5nLWNvbmNl/cHQtb25saW5lLWZp/bG1zaG93LWVudGVy/dGFpbm1lbnQtM2Qt/Y2luZW1hdGljLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1L/MjJTZzZvZHNmYjBj/S2ZQUHNQc1RILUtt/a1YxNDRHeEFpOUdJ/MV9NSWFVPQ"
-                            width="32" />
-                        <div>
-                            <a class="font-semibold text-blue-600 hover:underline" href="/s/movies.php">
-                                Movies
-                            </a>
-                            <p class="text-xs text-gray-500">
-                                8 members
-                            </p>
-                        </div>
-                    </li>
-                    <li class="flex items-center space-x-3 hover:bg-gray-50 rounded p-2 cursor-pointer">
-                        <img alt="Subreddit icon with white G letter on green background" class="w-8 h-8 rounded-full"
-                            height="32"
-                            src="https://imgs.search.brave.com/7umtls4WgPf5dhNCIe9QCAYWKiugsZuO2r2xqCJ2BzM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvZ2FtaW5nLXps/M3ZuZ3hwdnYwNGEz/MGouanBn"
-                            width="32" />
-                        <div>
-                            <a class="font-semibold text-blue-600 hover:underline" href="/s/gaming.php">
-                                Gaming
-                            </a>
-                            <p class="text-xs text-gray-500">
-                                15 members
-                            </p>
-                        </div>
-                    </li>
-                    <li class="flex items-center space-x-3 hover:bg-gray-50 rounded p-2 cursor-pointer">
-                        <img alt="Subreddit icon with white F letter on blue background" class="w-8 h-8 rounded-full"
-                            height="32"
-                            src="https://imgs.search.brave.com/xXprWLbNAmO7Znn3XGC8PVBafLbriVYwSNDBxAxedCs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTUx/NjM1MDMyL3ZlY3Rv/ci9wb3AtYXJ0LWNv/bWljLWJvb2stc3R5/bGUtbW91dGgtb2Yt/bWFuLWxhdWdoaW5n/LW91dC1sb3VkLXZl/Y3Rvci1pbGx1c3Ry/YXRpb24uanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPW1SVDMw/S2R3ZkFhYUxtZ2Jn/LS1EQU5QUXNWT19O/ZUU1V29maXltZHR4/ams9"
-                            width="32" />
-                        <div>
-                            <a class="font-semibold text-blue-600 hover:underline" href="/s/funny.php">
-                                Funny
-                            </a>
-                            <p class="text-xs text-gray-500">
-                                22 members
-                            </p>
-                        </div>
-                    </li>
-                    <li class="flex items-center space-x-3 hover:bg-gray-50 rounded p-2 cursor-pointer">
-                        <img alt="Subreddit icon with white S letter on blue background" class="w-8 h-8 rounded-full"
-                            height="32"
-                            src="https://imgs.search.brave.com/tI00v0HeilDMXp_AF3eAXNwM_LPuvwDlKIxTTtPR7Oo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzUzLzY0LzQ5/LzM2MF9GXzUzNjQ0/OTI2XzBtdlVDSXhD/Q1R2SWE3QkFJRnVV/YTN4c2FOQTlsYmVi/LmpwZw"
-                            width="32" />
-                        <div>
-                            <a class="font-semibold text-blue-600 hover:underline" href="/s/science.php">
-                                Science
-                            </a>
-                            <p class="text-xs text-gray-500">
-                                10 members
-                            </p>
-                        </div>
-                    </li>
+                    <?php
+                    // Array of communities and their corresponding images
+                    $popular_communities = [
+                        "Technology" => "https://imgs.search.brave.com/zPLEmnXUkNTGq2-f6qUw6V4QGyvtMvn_xTyz6qqCLQI/rs:fit:200:200:1:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vNjEvMjU3NDYx/LTA1MC04NDRGQzVD/NS9TcG90LWZvdXIt/bGVnZ2VkLXJvYm90/LUJvc3Rvbi1EeW5h/bWljcy5qcGc",
+                        "Movies" => "https://imgs.search.brave.com/BLUlyNmCP1YDqkAHXMF21_I4J1mpKDbuISpmATCL6lc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMz/NzIxNDI4My92ZWN0/b3IvcmVhbGlzdGlj/LXBvcGNvcm4tY2lu/ZW1hLW1vdmllLXdh/dGNoaW5nLWNvbmNl/cHQtb25saW5lLWZp/bG1zaG93LWVudGVy/dGFpbm1lbnQtM2Qt/Y2luZW1hdGljLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1L/MjJTZzZvZHNmYjBj/S2ZQUHNQc1RILUtt/a1YxNDRHeEFpOUdJ/MV9NSWFVPQ",
+                        "Gaming" => "https://imgs.search.brave.com/7umtls4WgPf5dhNCIe9QCAYWKiugsZuO2r2xqCJ2BzM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvZ2FtaW5nLXps/M3ZuZ3hwdnYwNGEz/MGouanBn",
+                        "Funny" => "https://imgs.search.brave.com/xXprWLbNAmO7Znn3XGC8PVBafLbriVYwSNDBxAxedCs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTUx/NjM1MDMyL3ZlY3Rv/ci9wb3AtYXJ0LWNv/bWljLWJvb2stc3R5/bGUtbW91dGgtb2Yt/bWFuLWxhdWdoaW5n/LW91dC1sb3VkLXZl/Y3Rvci1pbGx1c3Ry/YXRpb24uanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPW1SVDMw/S2R3ZkFhYUxtZ2Jn/LS1EQU5QUXNWT19O/ZUU1V29maXltZHR4/ams9",
+                        "Science" => "https://imgs.search.brave.com/tI00v0HeilDMXp_AF3eAXNwM_LPuvwDlKIxTTtPR7Oo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzUzLzY0LzQ5/LzM2MF9GXzUzNjQ0/OTI2XzBtdlVDSXhD/Q1R2SWE3QkFJRnVV/YTN4c2FOQTlsYmVi/LmpwZw"
+                    ];
+
+                    foreach ($popular_communities as $community_name => $image_url) {
+                        // Query to get the total number of posts for the current community
+                        $query_count = "SELECT COUNT(*) AS total_posts FROM post WHERE community = ?";
+                        $stmt_count = mysqli_prepare($link, $query_count);
+                        mysqli_stmt_bind_param($stmt_count, "s", $community_name);
+                        mysqli_stmt_execute($stmt_count);
+                        $result_count = mysqli_stmt_get_result($stmt_count);
+                        $row_count = mysqli_fetch_assoc($result_count);
+                        $total_posts = $row_count['total_posts'];
+                        mysqli_stmt_close($stmt_count);
+                    ?>
+                        <li class="flex items-center space-x-3 hover:bg-gray-50 rounded p-2 cursor-pointer">
+                            <img alt="Community icon for <?php echo htmlspecialchars($community_name); ?>" class="w-8 h-8 rounded-full"
+                                height="32"
+                                src="<?php echo htmlspecialchars($image_url); ?>"
+                                width="32" />
+                            <div>
+                                <a class="font-semibold text-blue-600 hover:underline" href="/s/<?php echo strtolower($community_name); ?>.php">
+                                    <?php echo htmlspecialchars($community_name); ?>
+                                </a>
+                                <p class="text-xs text-gray-500">
+                                    <?php echo $total_posts; ?> Posts
+                                </p>
+                            </div>
+                        </li>
+                    <?php
+                    }
+                    ?>
                 </ul>
             </section>
             <?php

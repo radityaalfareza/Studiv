@@ -41,7 +41,7 @@ if (!isset($_SESSION['account_id'])) {
         ?>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
             <div class="flex items-center space-x-3">
-                <a href="beranda.php">
+                <a href="../beranda.php">
                     <img alt="Studiv" src="../img/logo studiv.svg" width="180" class="cursor-pointer" />
                 </a>
             </div>
@@ -64,7 +64,7 @@ if (!isset($_SESSION['account_id'])) {
                     <i class="fas fa-plus">
                     </i>
                     <span class="font-semibold">
-                        <a href="create_post.php"> Create Post</a>
+                        <a href="../create_post.php"> Create Post</a>
                     </span>
                 </button>
             </nav>
