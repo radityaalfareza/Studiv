@@ -182,10 +182,16 @@ $community_images = [
                 </div>
             </div>
             <div class="mt-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">Recent Posts</h2>
+                <div class="relative mb-4">
+                    <h2 class="text-xl font-bold text-gray-800">Recent Posts</h2>
+                    <a href="all_posts.php" class="px-3 py-1 bg-blue-600 text-white text-s rounded hover:bg-blue-700 absolute top-0 right-0 text-l text-blue-600 hover:underline">
+                        See all posts
+                    </a>
+                </div>
+
                 <div class="space-y-4">
                     <?php while ($post = mysqli_fetch_assoc($result_posts)) : ?>
-                        <article class="border border-gray-200 rounded-md p-4 hover:shadow-lg cursor-pointer">
+                        <article class="relative border border-gray-200 rounded-md p-4 hover:shadow-lg cursor-pointer">
                             <div class="flex items-center space-x-2 text-xs text-gray-500 mb-2">
                                 <img class="w-5 h-5 rounded-full" src="<?php echo $community_images[$post['community']] ?? ''; ?>" alt="community">
                                 <a class="font-semibold text-blue-600 hover:underline" href="<?php echo $community_links[$post['community']] ?? '#'; ?>">
@@ -193,8 +199,13 @@ $community_images = [
                                 </a>
                                 <span>• <?php echo date("M d, Y", strtotime($post['created_at'])); ?></span>
                             </div>
-                            <a href="<?php echo htmlspecialchars($post['location']); ?>" class="text-lg font-semibold text-gray-900"><?php echo htmlspecialchars($post['title']); ?></a>
+
+                            <a href="<?php echo htmlspecialchars($post['location']); ?>" class="text-lg font-semibold text-gray-900">
+                                <?php echo htmlspecialchars($post['title']); ?>
+                            </a>
+
                             <p class="mt-1 text-gray-700 text-sm"><?php echo htmlspecialchars($post['body']); ?></p>
+
                             <div class="mt-3 flex items-center space-x-6 text-gray-500 text-sm">
                                 <div class="flex items-center space-x-1">
                                     <i class="fas fa-arrow-up"></i>

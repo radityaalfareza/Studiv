@@ -6,22 +6,22 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../vendor/autoload.php'; // pastikan path ini sesuai tempat PHPMailer autoload
 
-function sendResetEmail($email, $token) {
-    $resetLink = "https://localhost/reset_password.php?token=$token";
+function sendResetEmail($email) {
+    $resetLink = "http://localhost/reset_password.php?token=Ag3rG5jhKXa";
 
     $mail = new PHPMailer(true);
     try {
         //Server settings
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
+        $mail->Host       = 'smtp.elasticemail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'awokawokawok227@gmail.com';  // Ganti dengan email Elastic Email kamu
-        $mail->Password   = 'gzpw fmlj mpga wqam';            // Ganti dengan API Key Elastic Email kamu
+        $mail->Username   = 'sugomadics@gmail.com';  // Ganti dengan email Elastic Email kamu
+        $mail->Password   = '68FB1A8661F8BD26604787C4D736DBAE556B';            // Ganti dengan API Key Elastic Email kamu
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
+        $mail->Port = 2525;
 
         //Recipients
-        $mail->setFrom('awokawokawok227@gmail.com', 'Studiv');
+        $mail->setFrom('sugomadics@gmail.com', 'Studiv');
         $mail->addAddress($email);
 
         // Content
@@ -41,29 +41,26 @@ function sendResetEmail($email, $token) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
 
-    // Cek apakah email terdaftar
-    $stmt = mysqli_prepare($link, "SELECT id FROM account WHERE email = ?");
+    if (!$email) {
+        echo "Email tidak valid.";
+        exit;
+    }
+
+    // Cek apakah email ada di database
+    $query = "SELECT id FROM account WHERE email = ?";
+    $stmt = mysqli_prepare($link, $query);
     mysqli_stmt_bind_param($stmt, "s", $email);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_store_result($stmt);
 
     if (mysqli_stmt_num_rows($stmt) === 0) {
-        header("Location: ../lupa_password.php?info=email_tidak_terdaftar");
+        header("Location: ../halaman_login.php?error=email_tidak_terdaftar");
         exit;
     }
 
-    // Buat token dan simpan ke DB
-    $token = bin2hex(random_bytes(32));
-    $expires_at = date("Y-m-d H:i:s", time() + 600); // 10 menit
-
-    $update = mysqli_prepare($link, "UPDATE account SET reset_token = ?, reset_expires_at = ? WHERE email = ?");
-    mysqli_stmt_bind_param($update, "sss", $token, $expires_at, $email);
-    mysqli_stmt_execute($update);
-    mysqli_stmt_close($update);
-
     // Kirim email reset password
-    if (sendResetEmail($email, $token)) {
-        header("Location: ../halaman_login.php?info=link_reset_dikirim");
+    if (sendResetEmail($email)) {
+        header("Location: ../halaman_login.php");
     } else {
         header("Location: ../halaman_login.php?error=gagal_kirim_email");
     }

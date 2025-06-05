@@ -1,3 +1,27 @@
+<?php
+require_once 'config/koneksi.php';
+
+$token = $_GET['token'] ?? '';
+
+if (!$token) {
+    die("Token tidak ditemukan.");
+}
+
+$stmt = mysqli_prepare($link, "SELECT email, reset_expires_at FROM account WHERE reset_token = ?");
+mysqli_stmt_bind_param($stmt, "s", $token);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+
+if ($row = mysqli_fetch_assoc($result)) {
+    if (strtotime($row['reset_expires_at']) < time()) {
+        die("Token sudah kedaluwarsa.");
+    }
+    $email = $row['email'];
+} else {
+    die("Token tidak valid.");
+}
+?>
+
 <html lang="en">
 
 <head>
@@ -33,6 +57,7 @@
                 Reset password
             </h1>
             <form class="space-y-6" action="proses/proses_reset_password.php" method="post">
+                <input type="hidden" name="email" value="<?= htmlspecialchars($email) ?>">
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1" for="password">
                         Password Baru
