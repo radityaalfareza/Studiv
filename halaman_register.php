@@ -13,15 +13,8 @@
         }
     </style>
 
-    <!-- ✅ reCAPTCHA v3 Script -->
-    <script src="https://www.google.com/recaptcha/api.js?render=6LepllkrAAAAAIZT064ax6bKT6CO-_wXMs8oARjC"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6LepllkrAAAAAIZT064ax6bKT6CO-_wXMs8oARjC', { action: 'register' }).then(function (token) {
-                document.getElementById('recaptcha_token').value = token;
-            });
-        });
-    </script>
+    <!-- reCAPTCHA v2 Script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body class="bg-gray-100 min-h-screen flex flex-col">
@@ -61,7 +54,11 @@
                 </div>
 
                 <!-- ✅ Hidden input untuk reCAPTCHA token -->
-                <input type="hidden" id="recaptcha_token" name="recaptcha_token">
+                    <form action="?" method="POST">
+                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                    <br/>
+                    <input type="submit" value="Submit">
+                    </form>
 
                 <div>
                     <button
