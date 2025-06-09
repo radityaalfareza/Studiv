@@ -1,0 +1,113 @@
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #076585;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}  
+
+input {
+  border-color: #979797; 
+  border-style: solid;
+}
+
+input:hover {
+  border-color: #999; /* or any style you want */
+  background-color: #f0f0f0;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+  border-color: #979797; 
+  border-style: solid;
+  resize: none !important;
+}
+
+textarea:hover {
+  border-color: #999; /* or any style you want */
+  background-color: #f0f0f0;
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+::placeholder {
+  text-align: center;
+}
+
+.custom-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.custom-heading {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.pp {
+  height: 60px;
+}
+.pp2 {
+  height: 100px;
+}
+.profilepp {
+  width: 220px;
+  height: 220px;
+}
+
+.image-button {
+  background-size: cover; /* Ensure the image covers the button */
+  background-position: center; /* Center the image */
+  border: none; /* Remove the button border */
+  padding: 0; /* Remove default padding */
+  width: 200px; /* Set the width of the button */
+  height: 100px; /* Set the height of the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.image-button:hover {
+  opacity: 0.8; /* Optional: Add hover effect */
+}
+
+.overflow-container {
+    max-height: 95.1vh; /* or whatever max size you want */
+    overflow-y: auto; /* vertical scroll */
+    overflow-x: hidden; /* no horizontal scroll */
+    
+    /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.overflow-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.custom-input {
+  border: none !important; /* Remove all borders */
+  border-bottom: 2px solid #91919171 !important; /* Add bottom border */
+  border-radius: 0 !important; /* Optional: remove border radius */
+  outline: none; /* Remove the outline on focus */
+}
+
+.custom-input:focus {
+  border-bottom: 2px solid #007bff !important; /* Add bottom border */
+}
+
+/* Remove blue outline and focus box-shadow */
+.form-control:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: none !important; /* Remove blue shadow */
+}
